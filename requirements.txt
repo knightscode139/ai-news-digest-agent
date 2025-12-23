@@ -1,0 +1,6 @@
+langchain==1.2.0
+langchain-deepseek==1.0.1
+notebook==7.5.1
+pydantic==2.12.5
+python-dotenv==1.2.1
+tavily-python==0.7.17
