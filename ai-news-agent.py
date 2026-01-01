@@ -23,9 +23,10 @@ def web_search(query: str) -> Dict[str, Any]:
         query=query,
         topics='news',
         search_depth='advanced',
+        chunks_per_source=5,
         max_results=10,
         time_range='day',
-        include_raw_content=True
+        include_raw_content=False
     )
 
 
@@ -64,7 +65,7 @@ agent = create_agent(
 )
 
 
-def get_ai_news(thread_id: str = "0") -> AINewsDigest:
+def get_ai_news() -> AINewsDigest:
     """Get the latest AI news."""
 
     response = agent.invoke({"messages": [HumanMessage(content="Is there new exciting news?")]})
